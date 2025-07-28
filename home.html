@@ -1,0 +1,1678 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OM SHELKE - Personal Project</title>
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    /* Make tool description text white in the tools section */
+    .tool-desc {
+      color: #fff !important;
+    }
+    /* Soft Skills section styling */
+    .soft-skills-section {
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+    .soft-skills-title {
+      color: #fff;
+      font-size: 2rem;
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+    .soft-skills-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+    .soft-skill-item {
+      background: #23263a;
+      border-radius: 16px;
+      padding: 24px 20px 20px 20px;
+      flex: 1 1 320px;
+      min-width: 280px;
+      max-width: 420px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 0;
+      /* Animation: fade in and slight upward movement */
+      opacity: 0;
+      transform: translateY(30px);
+      animation: softSkillFadeIn 0.7s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+    }
+    /* Staggered animation for each item */
+    .soft-skill-item:nth-child(1) { animation-delay: 0.05s; }
+    .soft-skill-item:nth-child(2) { animation-delay: 0.15s; }
+    .soft-skill-item:nth-child(3) { animation-delay: 0.25s; }
+    .soft-skill-item:nth-child(4) { animation-delay: 0.35s; }
+    .soft-skill-item:nth-child(5) { animation-delay: 0.45s; }
+    .soft-skill-item:nth-child(6) { animation-delay: 0.55s; }
+    .soft-skill-item:nth-child(7) { animation-delay: 0.65s; }
+    .soft-skill-item:nth-child(8) { animation-delay: 0.75s; }
+    .soft-skill-item:nth-child(9) { animation-delay: 0.85s; }
+    .soft-skill-item:nth-child(10) { animation-delay: 0.95s; }
+
+    @keyframes softSkillFadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .soft-skill-item:hover, .soft-skill-item:focus-within {
+      /* Add a subtle scale and shadow on hover/focus for interactivity */
+      transform: scale(1.035) translateY(-2px);
+      box-shadow: 0 6px 24px rgba(255, 215, 0, 0.10), 0 2px 8px rgba(0,0,0,0.10);
+      transition: transform 0.18s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 0.18s;
+      z-index: 1;
+    }
+    .soft-skill-name {
+      font-size: 1.15rem;
+      font-weight: 500;
+      margin-bottom: 8px;
+      color: #ffd700;
+      /* Animate color on hover of parent */
+      transition: color 0.18s;
+    }
+    .soft-skill-item:hover .soft-skill-name,
+    .soft-skill-item:focus-within .soft-skill-name {
+      color: #fff700;
+    }
+    .soft-skill-desc {
+      font-size: 1rem;
+      color: #e0e0e0;
+      line-height: 1.5;
+      /* Animate color on hover of parent */
+      transition: color 0.18s;
+    }
+    .soft-skill-item:hover .soft-skill-desc,
+    .soft-skill-item:focus-within .soft-skill-desc {
+      color: #fff;
+    }
+    @media (max-width: 900px) {
+      .soft-skills-list {
+        flex-direction: column;
+        gap: 16px;
+      }
+      .soft-skill-item {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!--
+    - #MAIN
+  -->
+
+  <main>
+
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="./assets/images/abc-modified.png" alt="OM SHELKE" width="80">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="OM SHELKE">OM SHELKE</h1>
+
+          <p class="title">Ai Engineer</p>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+
+              <a href="mailto:omdevdattshelke@gmail.com" class="contact-link">omdevdattshelke@gmail.com</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+
+              <a href="tel:+12133522795" class="contact-link">+91 9923099620</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="calendar-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Birthday</p>
+
+              <time datetime="2006-09-16">sept 16, 2006</time>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+
+              <address>Nashik ,Maharashtra, Bharat</address>
+            </div>
+
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </aside>
+
+
+
+
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <button class="navbar-link  active" data-nav-link>About</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Resume</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Project</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Blog</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Contact</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Social</button>
+          </li>
+
+        </ul>
+
+      </nav>
+
+
+
+
+
+      <!--
+        - #ABOUT
+      -->
+
+      <article class="about  active" data-page="about">
+
+        <header>
+          <h2 class="h2 article-title">About me</h2>
+        </header>
+
+        <section class="about-text">
+          <p>
+            I'm Om Shelke
+            AI/ML Developer & Creative Technologist from India
+            
+            I specialize in developing smart, user-focused solutions through Artificial Intelligence, Machine Learning, and Web Development. I enjoy transforming complex ideas into simple, intelligent, and visually engaging experiences.
+
+          </p>
+
+          <p>
+            My role is to build intelligent applications—whether it's a real-time emotion detection system, an AI-powered game, or an interactive portfolio—that are not only functional but also enjoyable to use. I blend technology with creativity to bring your vision to life in the smartest way possible. I’ve developed projects for a range of domains, from entertainment to deep tech.
+            
+            Let’s build something innovative together!
+          </p>
+        </section>
+
+
+        <!--
+          - service
+        -->
+
+        <section class="service">
+
+          <h3 class="h3 service-title">What i'm doing</h3>
+
+          <ul class="service-list">
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/game-developement-svgrepo-com.svg
+                " alt="design icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Game Development</h4>
+
+                <p class="service-item-text">
+                  I build fun, interactive games using code, combining creativity with smart logic.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/web-development-svgrepo-com.svg" alt="Web development icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Web development</h4>
+
+                <p class="service-item-text">
+                  High-quality development of sites at the professional level.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/artificial-intelligence-svgrepo-com.svg" alt="mobile app icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">AI & ML</h4>
+
+                <p class="service-item-text">
+                  I create smart solutions using machine learning and deep learning to solve real-world problems.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/database-svgrepo-com.svg" alt="camera icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Data Science</h4>
+
+                <p class="service-item-text">
+                  Turning raw data into actionable insights through analysis, visualization, and machine learning.
+                </p>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section>
+
+
+        <!--
+          - testimonials
+        -->
+
+        <section class="testimonials">
+
+          <h3 class="h3 testimonials-title">Skills</h3>
+
+          <ul class="testimonials-list has-scrollbar">
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/python.svg" alt="Daniel lewis" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Python</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Python has been the foundation of my journey into the world of AI, Machine Learning, and intelligent software development. From building emotion detection systems using CNN and OpenCV, to analyzing datasets with Pandas and NumPy, I’ve used Python to turn complex ideas into working, real-time applications. It’s more than just a programming language for me—it’s a powerful tool that enables creativity, automation, and innovation. Whether it's creating smart ML models, developing APIs, or integrating AI features into games and web apps, Python has helped me bring my passion for technology to life. Its simplicity, flexibility, and vast ecosystem make it the perfect companion as I explore new challenges and build solutions that matter.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/javascript.svg" alt="Jessica miller" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>JavaScript</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    JavaScript is at the heart of how I bring interactivity and life to the web. From building dynamic websites to developing browser-based games like Minesweeper, I use JavaScript to create responsive, real-time user experiences. It allows me to manipulate the DOM, handle events, and control animations with precision. Whether it's enhancing a user interface with smooth transitions or connecting to APIs for live data, JavaScript gives me the power to turn static pages into powerful, interactive tools. With frameworks like React and libraries like jQuery, I've explored advanced front-end development while keeping code clean and scalable. For me, JavaScript is not just a language—it's the engine that drives modern web innovation.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/sql.svg" alt="Emily evans" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Sql</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    SQL is my go-to language for managing and working with data efficiently. I use it to design and query databases, extract meaningful insights, and handle large datasets with precision. Whether it's performing CRUD operations, joining multiple tables, or optimizing complex queries, SQL helps me maintain the backbone of data-driven applications. It plays a key role in my machine learning and web projects, where clean and well-structured data is essential for performance and decision-making.ia.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/java.svg" alt="Henry william" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Java</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Java introduced me to core programming principles like object-oriented design, modular thinking, and strong typing. I’ve used it to build logic-based applications and understand how structured code can scale across large projects. With its platform independence and robustness, Java taught me the importance of writing secure and maintainable code. It laid the foundation for my understanding of backend development and deeper programming concepts that I now apply across various languages.
+                  </p>
+                </div>
+                
+
+              </div>
+            </li>
+
+            <!-- New Skill: C Language -->
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/c.svg" alt="C language" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>C</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    C was my gateway into the world of programming, teaching me how computers really work under the hood. It helped me build a strong foundation in logic building, memory management, and algorithmic thinking. Writing code in C improved my understanding of how data is stored, how loops and conditions work at a low level, and how efficient code can be crafted with limited resources. Though it’s a low-level language compared to others I use today, C sharpened my problem-solving skills and gave me a solid base for learning more advanced languages and technologies.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+            <!-- End New Skill -->
+
+            <!-- Machine Learning -->
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/machine.svg" alt="Machine Learning" width="60" data-testimonials-avatar>
+                </figure>
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Machine Learning</h4>
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    I apply machine learning techniques to build predictive models that learn from data and improve over time. I work with algorithms like decision trees, SVMs, and clustering for real-world problem-solving.
+                  </p>
+                </div>
+              </div>
+            </li>
+            <!-- Deep Learning -->
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/deep.svg" alt="Deep Learning" width="60" data-testimonials-avatar>
+                </figure>
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Deep Learning</h4>
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    I design and train deep neural networks using frameworks like TensorFlow and Keras. My focus includes CNNs for image classification and RNNs for sequence-based data like text or speech.
+                  </p>
+                </div>
+              </div>
+            </li>
+            <!-- Data Preprocessing -->
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/data.svg" alt="Data Preprocessing" width="60" data-testimonials-avatar>
+                </figure>
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Data Preprocessing</h4>
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    I handle raw datasets by cleaning, normalizing, and transforming them to ensure quality input for ML models. This includes dealing with missing data, encoding, and feature scaling.
+                  </p>
+                </div>
+              </div>
+            </li>
+            <!-- OpenCV -->
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/open.svg" alt="OpenCV" width="60" data-testimonials-avatar>
+                </figure>
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>OpenCV</h4>
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    I use OpenCV for computer vision tasks such as face detection, object tracking, and real-time video analysis. It allows me to integrate visual intelligence into my AI projects.
+                  </p>
+                </div>
+              </div>
+            </li>
+            <!-- Model Evaluation and Optimization -->
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/model.svg" alt="Model Evaluation and Optimization" width="60" data-testimonials-avatar>
+                </figure>
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Model Evaluation and Optimization</h4>
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    I evaluate models using metrics like accuracy, precision, and recall, and fine-tune hyperparameters for better performance. This helps me improve model generalization and avoid overfitting.
+                  </p>
+                </div>
+              </div>
+            </li>
+            <!-- API Integration -->
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/api.svg" alt="API Integration" width="60" data-testimonials-avatar>
+                </figure>
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>API Integration</h4>
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    I connect applications with third-party services using APIs for data exchange, authentication, and extended functionalities. This skill allows my projects to be more dynamic and connected.
+                  </p>
+                </div>
+              </div>
+            </li>
+            <!-- End new skills -->
+
+          </ul>
+
+        </section>
+
+
+        <!--
+          - testimonials modal
+        -->
+
+        <div class="modal-container" data-modal-container>
+
+          <div class="overlay" data-overlay></div>
+
+          <section class="testimonials-modal">
+
+            <button class="modal-close-btn" data-modal-close-btn>
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+
+            <div class="modal-img-wrapper">
+              <figure class="modal-avatar-box">
+                <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
+              </figure>
+
+              <img src="./assets/images/icon-quote.svg" alt="quote icon">
+            </div>
+
+            <div class="modal-content">
+
+              <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
+
+              <time datetime="2021-06-14">23 july,2025</time>
+
+              <div data-modal-text>
+                <p>
+                  Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
+                  lot of experience
+                  and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                  consectetur adipiscing
+                  elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                </p>
+              </div>
+
+            </div>
+
+          </section>
+
+        </div>
+
+
+        <!--
+          - tools (replacing clients)
+        -->
+
+        <section class="clients">
+
+          <h3 class="h3 clients-title">Tools</h3>
+
+          <ul class="clients-list has-scrollbar">
+
+            <li class="clients-item">
+              <div class="tool-card">
+                <img src="./assets/images/google.svg" alt="Google Colab" width="60">
+                <div class="tool-info">
+                  <h4 class="tool-title">Google Colab</h4>
+                  <p class="tool-desc">I use Google Colab for training machine learning models efficiently in the cloud with powerful GPU support.</p>
+                </div>
+              </div>
+            </li>
+
+            <li class="clients-item">
+              <div class="tool-card">
+                <img src="./assets/images/visual-studio-code.svg" alt="VS Code" width="60">
+                <div class="tool-info">
+                  <h4 class="tool-title">VS Code</h4>
+                  <p class="tool-desc">I code in VS Code for its flexibility, extensions, and smooth experience across web and AI/ML development.</p>
+                </div>
+              </div>
+            </li>
+
+            <li class="clients-item">
+              <div class="tool-card">
+                <img src="./assets/images/android-studio.svg" alt="Android Studio" width="60">
+                <div class="tool-info">
+                  <h4 class="tool-title">Android Studio</h4>
+                  <p class="tool-desc">I develop mobile applications using Android Studio with Java and Kotlin for seamless Android experiences.</p>
+                </div>
+              </div>
+            </li>
+
+            <li class="clients-item">
+              <div class="tool-card">
+                <img src="./assets/images/canva.svg" alt="Canva" width="60">
+                <div class="tool-info">
+                  <h4 class="tool-title">Canva</h4>
+                  <p class="tool-desc">I design posters, social content, and UI mockups in Canva with speed and simplicity for clean visuals.</p>
+                </div>
+              </div>
+            </li>
+
+            <li class="clients-item">
+              <div class="tool-card">
+                <img src="./assets/images/power-bi.svg" alt="Power BI" width="60">
+                <div class="tool-info">
+                  <h4 class="tool-title">Power BI</h4>
+                  <p class="tool-desc">I use Power BI to create interactive dashboards and visual reports that simplify complex data insights.</p>
+                </div>
+              </div>
+            </li>
+
+            <li class="clients-item">
+              <div class="tool-card">
+                <img src="./assets/images/jupyter.svg" alt="Jupyter Notebook" width="60">
+                <div class="tool-info">
+                  <h4 class="tool-title">Jupyter Notebook</h4>
+                  <p class="tool-desc">I work with Jupyter Notebook for exploring data, visualizing trends, and building ML prototypes.</p>
+                </div>
+              </div>
+            </li>
+
+            <li class="clients-item">
+              <div class="tool-card">
+                <img src="./assets/images/microsoft.svg" alt="Microsoft Excel" width="60">
+                <div class="tool-info">
+                  <h4 class="tool-title">Microsoft Excel</h4>
+                  <p class="tool-desc">I utilize Microsoft Excel for data analysis, modeling, and quick visualizations in structured formats.</p>
+                </div>
+              </div>
+            </li>
+
+            <li class="clients-item">
+              <div class="tool-card">
+                <img src="./assets/images/adobe-photoshop.svg" alt="Adobe Photoshop" width="60">
+                <div class="tool-info">
+                  <h4 class="tool-title">Adobe Photoshop</h4>
+                  <p class="tool-desc">I enhance and create digital graphics in Adobe Photoshop, adding visual impact to my projects.</p>
+                </div>
+              </div>
+            </li>
+
+            <li class="clients-item">
+              <div class="tool-card">
+                <img src="./assets/images/github.svg" alt="GitHub" width="60">
+                <div class="tool-info">
+                  <h4 class="tool-title">GitHub</h4>
+                  <p class="tool-desc">I manage my code, collaborate on projects, and deploy my work using GitHub for version control and sharing.</p>
+                </div>
+              </div>
+            </li>
+
+            <li class="clients-item">
+              <div class="tool-card">
+                <img src="./assets/images/scikit-learn.svg" alt="Scikit-learn" width="60">
+                <div class="tool-info">
+                  <h4 class="tool-title">Scikit-learn</h4>
+                  <p class="tool-desc">I use Scikit-learn to build machine learning models, preprocess data, and evaluate results with ease.</p>
+                </div>
+              </div>
+            </li>
+
+          </ul>
+
+        </section>
+
+        <!--
+          - Soft Skills Section
+        -->
+        <section class="soft-skills-section">
+          <h3 class="soft-skills-title">Soft Skills</h3>
+          <ul class="soft-skills-list">
+            <li class="soft-skill-item">
+              <div class="soft-skill-name">Critical Thinking</div>
+              <div class="soft-skill-desc">
+                I analyze problems from multiple angles before deciding on a solution. I enjoy questioning assumptions and finding better ways to solve challenges.
+              </div>
+            </li>
+            <li class="soft-skill-item">
+              <div class="soft-skill-name">Analytical Thinking</div>
+              <div class="soft-skill-desc">
+                I break down complex problems into smaller parts to understand patterns and insights. This helps in building accurate models and making data-driven decisions.
+              </div>
+            </li>
+            <li class="soft-skill-item">
+              <div class="soft-skill-name">Problem Solving</div>
+              <div class="soft-skill-desc">
+                I focus on finding effective and practical solutions when faced with obstacles. I enjoy debugging, fixing issues, and improving system performance.
+              </div>
+            </li>
+            <li class="soft-skill-item">
+              <div class="soft-skill-name">Creativity and Innovation</div>
+              <div class="soft-skill-desc">
+                I love thinking outside the box to bring fresh ideas to my projects. I combine logic with imagination to create unique solutions and user experiences.
+              </div>
+            </li>
+            <li class="soft-skill-item">
+              <div class="soft-skill-name">Communication Skills</div>
+              <div class="soft-skill-desc">
+                I express ideas clearly in both writing and speech, making collaboration smooth. I can also explain technical topics to non-technical people effectively.
+              </div>
+            </li>
+            <li class="soft-skill-item">
+              <div class="soft-skill-name">Listening Skills</div>
+              <div class="soft-skill-desc">
+                I pay close attention to feedback and instructions to ensure clarity. Listening actively helps me work better with team members and understand user needs.
+              </div>
+            </li>
+            <li class="soft-skill-item">
+              <div class="soft-skill-name">Time Management</div>
+              <div class="soft-skill-desc">
+                I prioritize tasks and manage my schedule efficiently to meet deadlines. Balancing multiple projects while staying organized is one of my key strengths.
+              </div>
+            </li>
+            <li class="soft-skill-item">
+              <div class="soft-skill-name">Project Management</div>
+              <div class="soft-skill-desc">
+                I plan, execute, and monitor my projects from start to finish. I ensure that goals are met on time while maintaining quality in every phase.
+              </div>
+            </li>
+            <li class="soft-skill-item">
+              <div class="soft-skill-name">Fast Learner</div>
+              <div class="soft-skill-desc">
+                I quickly adapt to new tools, technologies, and workflows. I enjoy learning and applying new concepts in real-world projects without delay.
+              </div>
+            </li>
+            <li class="soft-skill-item">
+              <div class="soft-skill-name">Research Mindset</div>
+              <div class="soft-skill-desc">
+                I actively explore new trends and solutions to improve my work. I believe research is the foundation of innovation and technical excellence.
+              </div>
+            </li>
+          </ul>
+        </section>
+        <!-- End Soft Skills Section -->
+
+      </article>
+
+
+
+
+
+      <!--
+        - #RESUME
+      -->
+
+      <article class="resume" data-page="resume">
+
+        <header>
+          <h2 class="h2 article-title">Resume</h2>
+        </header>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+            <h3 class="h3">🎓 Education</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Diploma in Artificial Intelligence and Machine Learning</h4>
+              <span>KK Wagh Polytechnic, Nashik<br>2022 – 2025</span>
+              <p class="timeline-text">
+                <strong>Coursework:</strong> Machine Learning, Deep Learning, Python, Data Structures, Computer Vision<br>
+                <strong>Projects:</strong> Emotion Detection using OpenCV &amp; CNN, Chess Game Recommendation using ML
+              </p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Secondary School Certificate (SSC)</h4>
+              <span>Vidya Prabodhini Prashala, Nashik<br>2019 – 2020</span>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Military Discipline Foundation</h4>
+              <span>Bhosala Military School, Nashik</span>
+              <p class="timeline-text">
+                
+              </p>
+            </li>
+
+          </ol>
+
+        </section>
+
+        <!-- Experience Section -->
+        <section class="timeline">
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="briefcase-outline"></ion-icon>
+            </div>
+            <h3 class="h3">💼 Experience</h3>
+          </div>
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Self-Project – Real-Time Emotion Detection</h4>
+              <span>Jan 2025 – Mar 2025</span>
+              <p class="timeline-text">
+                Developed a real-time emotion detection system using OpenCV and CNN, trained on the FER-2013 dataset. Integrated webcam-based live prediction using Python.
+              </p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Academic Project – Chess Game Review System</h4>
+              <span>Aug 2024 – Dec 2024</span>
+              <p class="timeline-text">
+                Created a machine learning-based system to analyze chess games and provide move suggestions. Used Scikit-learn for model training and evaluation.
+              </p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Freelance – Web Game Developer</h4>
+              <span>Nov 2024 – Present</span>
+              <p class="timeline-text">
+                Built interactive web-based games like Minesweeper using HTML, CSS, and JavaScript. Applied DOM manipulation and event-driven programming. Projects deployed on GitHub Pages.
+              </p>
+            </li>
+
+          </ol>
+        </section>
+        <!-- End Experience Section -->
+
+        <!-- Skills section remains unchanged -->
+        <section class="skill">
+
+          <h3 class="h3 skills-title">My skills</h3>
+
+          <ul class="skills-list content-card">
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Web design</h5>
+                <data value="80">80%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 80%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Graphic design</h5>
+                <data value="70">70%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 70%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Branding</h5>
+                <data value="90">90%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 90%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">WordPress</h5>
+                <data value="50">50%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 50%;"></div>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #PROJECT
+      -->
+
+      <article class="project" data-page="project">
+
+        <header>
+          <h2 class="h2 article-title">Project</h2>
+        </header>
+
+        <section class="projects">
+
+          <ul class="filter-list">
+            <li class="filter-item">
+              <button class="active" data-filter-btn>All</button>
+            </li>
+            <li class="filter-item">
+              <button data-filter-btn>Web development</button>
+            </li>
+          </ul>
+
+          <div class="filter-select-box">
+            <button class="filter-select" data-select>
+              <div class="select-value" data-selecct-value>Select category</div>
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
+            </button>
+            <ul class="select-list">
+              <li class="select-item">
+                <button data-select-item>All</button>
+              </li>
+              <li class="select-item">
+                <button data-select-item>Web development</button>
+              </li>
+            </ul>
+          </div>
+
+          <ul class="project-list">
+            <!-- Minesweeper Game project -->
+            <li class="project-item active" data-filter-item data-category="web development">
+              <a href="https://omshelke16.github.io/minesweeperdevbyomshelke/" target="_blank" rel="noopener">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/project3.png" alt="Minesweeper Game" loading="lazy">
+                </figure>
+                <h3 class="project-title">Minesweeper Game</h3>
+                <p class="project-category">Web development</p>
+              </a>
+            </li>
+            <!-- Sliding Puzzle -->
+            <li class="project-item active" data-filter-item data-category="web development">
+              <a href="https://omshelke16.github.io/slidingpuzzle/" target="_blank" rel="noopener">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/project1.png" alt="Sliding Puzzle" loading="lazy">
+                </figure>
+                <h3 class="project-title">Sliding Puzzle</h3>
+                <p class="project-category">Web development</p>
+              </a>
+            </li>
+            <!-- Car Drift Game -->
+            <li class="project-item active" data-filter-item data-category="web development">
+              <a href="https://omshelke16.github.io/cardriftgame/" target="_blank" rel="noopener">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/project2.png" alt="Car Drift Game" loading="lazy">
+                </figure>
+                <h3 class="project-title">Car Drift Game</h3>
+                <p class="project-category">Web development</p>
+              </a>
+            </li>
+            <!-- OX Game -->
+            <li class="project-item active" data-filter-item data-category="web development">
+              <a href="https://omshelke16.github.io/oxgame/" target="_blank" rel="noopener">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/project4.png" alt="OX Game" loading="lazy">
+                </figure>
+                <h3 class="project-title">OX Game</h3>
+                <p class="project-category">Web development</p>
+              </a>
+            </li>
+            <!-- Simon Says -->
+            <li class="project-item active" data-filter-item data-category="web development">
+              <a href="https://omshelke16.github.io/Simonsays/" target="_blank" rel="noopener">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/project5.png" alt="Simon Says" loading="lazy">
+                </figure>
+                <h3 class="project-title">Simon Says</h3>
+                <p class="project-category">Web development</p>
+              </a>
+            </li>
+            <!-- Word Dash Game -->
+            <li class="project-item active" data-filter-item data-category="web development">
+              <a href="https://word-dash-game-oms.onrender.com" target="_blank" rel="noopener">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/project6.png" alt="Word Dash Game" loading="lazy">
+                </figure>
+                <h3 class="project-title">Word Dash Game</h3>
+                <p class="project-category">Web development</p>
+              </a>
+            </li>
+            <!-- Sudoku Game -->
+            <li class="project-item active" data-filter-item data-category="web development">
+              <a href="https://omshelke16.github.io/sudoku/" target="_blank" rel="noopener">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/project7.png" alt="Sudoku Game" loading="lazy">
+                </figure>
+                <h3 class="project-title">Sudoku Game</h3>
+                <p class="project-category">Web development</p>
+              </a>
+            </li>
+            <!-- Whack-a-Mole -->
+            <li class="project-item active" data-filter-item data-category="web development">
+              <a href="https://omshelke16.github.io/wackamole/" target="_blank" rel="noopener">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/project8.png" alt="Whack-a-Mole" loading="lazy">
+                </figure>
+                <h3 class="project-title">Whack-a-Mole</h3>
+                <p class="project-category">Web development</p>
+              </a>
+            </li>
+            <!-- Clicking Game -->
+            <li class="project-item active" data-filter-item data-category="web development">
+              <a href="https://omshelke16.github.io/Clicking/" target="_blank" rel="noopener">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/project9.png" alt="Clicking Game" loading="lazy">
+                </figure>
+                <h3 class="project-title">Clicking Game</h3>
+                <p class="project-category">Web development</p>
+              </a>
+            </li>
+            <!-- Click Game -->
+            <li class="project-item active" data-filter-item data-category="web development">
+              <a href="https://omshelke16.github.io/click/" target="_blank" rel="noopener">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/project10.png" alt="Click Game" loading="lazy">
+                </figure>
+                <h3 class="project-title">Click Game</h3>
+                <p class="project-category">Web development</p>
+              </a>
+            </li>
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #BLOG
+      -->
+
+      <article class="blog" data-page="blog">
+
+        <header>
+          <h2 class="h2 article-title">Blog</h2>
+        </header>
+
+        <section class="blog-posts">
+
+          <ul class="blog-posts-list">
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-1.jpg" alt="Design conferences in 2022" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">July 24,2025</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Real-Time Emotion detection using Open CV and CNN</h3>
+
+                  <p class="blog-text">
+                    <strong>📘 Blog Title:</strong> Real-Time Emotion Detection using OpenCV & CNN<br>
+                    <strong>🗓️ Date:</strong> July 2025<br>
+                    <strong>✍️ Author:</strong> Om Shelke<br><br>
+                  
+                    <strong>🔍 Overview:</strong><br>
+                    I built a system that detects human emotions live via webcam using OpenCV and a CNN model trained on the FER-2013 dataset.<br><br>
+                  
+                    <strong>💡 Why I Built It:</strong><br>
+                    As an AI student, I wanted to explore real-time computer vision and emotion recognition during my diploma.<br><br>
+                  
+                    <strong>🧠 Tech Stack:</strong><br>
+                    Python, OpenCV, Keras + TensorFlow, Google Colab, FER-2013 Dataset<br><br>
+                  
+                    <strong>🔧 Key Steps:</strong><br>
+                    1. Preprocessed 35K+ facial images<br>
+                    2. Trained CNN to detect 7 emotions<br>
+                    3. Integrated model with webcam feed for real-time prediction<br><br>
+                  
+                    <strong>🎯 Challenges:</strong><br>
+                    - Model accuracy<br>
+                    - Webcam lag<br>
+                    - Poor lighting<br><br>
+                  
+                    <strong>🚀 Learnings:</strong><br>
+                    - Data preprocessing is vital<br>
+                    - Real-time model integration<br>
+                    - Performance optimization<br><br>
+                  
+                    <strong>✅ Outcome:</strong><br>
+                    A working real-time emotion detection system with live emotion display.<br><br>
+                  
+                    <strong>📈 Next Steps:</strong><br>
+                    Add voice-based emotion analysis and mood-aware chatbot features.
+                  </p>
+                  
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-2.jpg" alt="Best fonts every designer" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">july 24,2025</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">How I Built a Chess Game Review System with Machine Learning</h3>
+
+                  <p class="blog-text">
+                    <strong>📘 Blog Title:</strong> Chess Game Review & Recommendation using ML<br>
+                    <strong>🗓️ Date:</strong> July 2025<br>
+                    <strong>✍️ Author:</strong> Om Shelke<br><br>
+                  
+                    <strong>🔍 Overview:</strong><br>
+                    I built a system that reviews chess games using machine learning and suggests better moves by comparing them with Stockfish engine recommendations.<br><br>
+                  
+                    <strong>💡 Why I Built It:</strong><br>
+                    Many beginners struggle to analyze their games. I wanted to automate this process and help players learn from their mistakes.<br><br>
+                  
+                    <strong>🧠 Tech Stack:</strong><br>
+                    Python, Scikit-learn, Pandas, NumPy, Stockfish, PGN files<br><br>
+                  
+                    <strong>🔧 Key Steps:</strong><br>
+                    1. Parsed PGN files to extract moves<br>
+                    2. Compared moves with Stockfish suggestions<br>
+                    3. Trained ML model to classify moves as good, average, or bad<br>
+                    4. Suggested better alternatives for poor moves<br><br>
+                  
+                    <strong>🎯 Challenges:</strong><br>
+                    - Parsing PGN format<br>
+                    - Interfacing with Stockfish<br>
+                    - Manually creating a labeled dataset<br><br>
+                  
+                    <strong>🚀 Learnings:</strong><br>
+                    - Using ML for game analysis<br>
+                    - Combining AI with chess logic<br>
+                    - Delivering actionable feedback to players<br><br>
+                  
+                    <strong>✅ Outcome:</strong><br>
+                    A working system that analyzes games and suggests improvements to help users grow.<br><br>
+                  
+                    <strong>📈 Next Steps:</strong><br>
+                    Build a web UI for PGN upload and explore real-time board recognition.
+                  </p>
+                  
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-3.jpg" alt="Design digest #80" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">July 24,2025</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">How I Deployed My Website for Free Using GitHub Pages</h3>
+
+                  <p class="blog-text">
+                    <strong>📘 Blog Title:</strong> How I Deployed My Website for Free Using GitHub Pages<br>
+                    <strong>🗓️ Date:</strong> July 2025<br>
+                    <strong>✍️ Author:</strong> Om Shelke<br><br>
+                  
+                    <strong>🔍 Overview:</strong><br>
+                    I used GitHub Pages to deploy my personal portfolio and web projects for free — without needing a custom server.<br><br>
+                  
+                    <strong>💡 Why GitHub Pages?</strong><br>
+                    - Free hosting<br>
+                    - Easy setup<br>
+                    - Perfect for static sites<br>
+                    - Git-based version control<br><br>
+                  
+                    <strong>🔧 What You Need:</strong><br>
+                    - GitHub account<br>
+                    - Project folder (with <code>index.html</code>)<br>
+                    - Basic Git/GitHub knowledge<br><br>
+                  
+                    <strong>🪜 Deployment Steps:</strong><br>
+                    1. Push your HTML/CSS/JS files to a GitHub repo<br>
+                    2. Go to Settings → Pages → Enable GitHub Pages<br>
+                    3. Get your live link: <code>https://username.github.io/project-name</code><br>
+                    4. Test & fix any asset path issues<br><br>
+                  
+                    <strong>📂 Projects I Deployed:</strong><br>
+                    - Minesweeper Game<br>
+                    - Portfolio site<br>
+                    - ML Tools Showcase (coming soon)<br><br>
+                  
+                    <strong>🧠 Key Tips:</strong><br>
+                    - Use <code>index.html</code> as the main page<br>
+                    - Use relative paths (e.g. <code>./images/logo.png</code>)<br>
+                    - Customize tab with favicon<br>
+                    - Optional: Add custom domain later<br><br>
+                  
+                    <strong>✅ Outcome:</strong><br>
+                    Now my projects are live and shareable. GitHub Pages helped me take them from local to global in minutes.
+                  </p>
+                  
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-4.jpg" alt="UI interactions of the week" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">July 24,2025</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">My First Machine Learning Model – From Data to Prediction</h3>
+
+                  <p class="blog-text">
+                    <strong>📘 Blog Title:</strong> My First Machine Learning Model – From Data to Prediction<br>
+                    <strong>🗓️ Date:</strong> July 2025<br>
+                    <strong>✍️ Author:</strong> Om Shelke<br><br>
+                  
+                    <strong>🔍 Overview:</strong><br>
+                    I built my first ML model using Python and Scikit-learn to predict whether students would pass or fail based on factors like study time and attendance.<br><br>
+                  
+                    <strong>💡 Problem Statement:</strong><br>
+                    Can we predict student performance using simple features like hours studied, past scores, and attendance?<br><br>
+                  
+                    <strong>🧠 Tools Used:</strong><br>
+                    Python, Scikit-learn, Pandas, NumPy, Matplotlib, Seaborn, Google Colab<br><br>
+                  
+                    <strong>🔧 Key Steps:</strong><br>
+                    1. Collected & cleaned student data<br>
+                    2. Explored patterns using visualizations<br>
+                    3. Trained a Logistic Regression model<br>
+                    4. Evaluated accuracy using test data (85%+)<br><br>
+                  
+                    <strong>🎯 Challenges:</strong><br>
+                    - Selecting key features<br>
+                    - Splitting data effectively<br>
+                    - Avoiding overfitting with limited samples<br><br>
+                  
+                    <strong>🚀 Learnings:</strong><br>
+                    - Data cleaning and exploration<br>
+                    - Basics of ML training/testing<br>
+                    - Using Scikit-learn for classification<br><br>
+                  
+                    <strong>✅ Outcome:</strong><br>
+                    Successfully built a binary classifier that predicts student success with good accuracy.<br><br>
+                  
+                    <strong>📈 What’s Next:</strong><br>
+                    Moving toward multi-class problems and starting CNN projects in computer vision.
+                  </p>
+                  
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-5.jpg" alt="The forgotten art of spacing" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">July 24,2025</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Getting Started with OpenCV – My First Computer Vision Project</h3>
+
+                  <p class="blog-text">
+                    <strong>📘 Blog Title:</strong> Getting Started with OpenCV – My First Computer Vision Project<br>
+                    <strong>🗓️ Date:</strong> July 2025<br>
+                    <strong>✍️ Author:</strong> Om Shelke<br><br>
+                  
+                    <strong>🔍 Overview:</strong><br>
+                    For my first computer vision project, I used OpenCV and Haar Cascade to build a real-time face detection system with just a few lines of Python code.<br><br>
+                  
+                    <strong>🧠 Tools Used:</strong><br>
+                    Python, OpenCV, Haar Cascade, Google Colab / VS Code, Webcam<br><br>
+                  
+                    <strong>🔧 Key Steps:</strong><br>
+                    1. Installed OpenCV using pip<br>
+                    2. Captured webcam feed in real time<br>
+                    3. Detected faces using Haar Cascade<br>
+                    4. Drew rectangles around faces on live video<br><br>
+                  
+                    <strong>🎯 Challenges:</strong><br>
+                    - Reducing false positives<br>
+                    - Dealing with poor lighting<br>
+                    - Understanding image matrices<br><br>
+                  
+                    <strong>🚀 Learnings:</strong><br>
+                    - Real-time image capture and processing<br>
+                    - Grayscale conversion for detection<br>
+                    - Basics of computer vision with OpenCV<br><br>
+                  
+                    <strong>✅ Outcome:</strong><br>
+                    A working face detection system that boosted my interest in CV and AI.<br><br>
+                  
+                    <strong>📈 What’s Next:</strong><br>
+                    I plan to combine OpenCV with CNNs for emotion detection and gesture controls.
+                  </p>
+                  
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-6.jpg" alt="Design digest #79" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">July 24,2025</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Exploring AI Art – How I Created Digital Art Using Machine Learning</h3>
+
+                  <p class="blog-text">
+                    <strong>📘 Blog Title:</strong> Exploring AI Art – Creating Digital Art with Machine Learning<br>
+                    <strong>🗓️ Date:</strong> July 2025<br>
+                    <strong>✍️ Author:</strong> Om Shelke<br><br>
+                  
+                    <strong>🔍 Overview:</strong><br>
+                    I explored AI tools like DALL·E, DeepArt, and Artbreeder to generate digital art from text and images — blending creativity with machine learning.<br><br>
+                  
+                    <strong>🎯 Goal:</strong><br>
+                    To understand how AI can turn ideas, photos, and faces into unique artwork using neural networks.<br><br>
+                  
+                    <strong>🧠 Tools Used:</strong><br>
+                    DALL·E, Deep Dream Generator, Artbreeder, Stable Diffusion, Canva, Photoshop<br><br>
+                  
+                    <strong>🔧 Key Steps:</strong><br>
+                    1. Generated images from prompts using DALL·E<br>
+                    2. Transformed photos into paintings via DeepArt<br>
+                    3. Morphed faces with Artbreeder sliders<br>
+                    4. Enhanced outputs using Canva/Photoshop<br><br>
+                  
+                    <strong>🚀 Learnings:</strong><br>
+                    - How GANs generate visuals<br>
+                    - Role of prompt design<br>
+                    - AI's creative potential in design/media<br><br>
+                  
+                    <strong>🎨 Use Cases:</strong><br>
+                    - Game assets, covers, website art, visual brainstorming<br><br>
+                  
+                    <strong>🎯 Challenges:</strong><br>
+                    - Model limitations and GPU requirements<br>
+                    - Balancing artistic control with AI automation<br><br>
+                  
+                    <strong>✅ Outcome:</strong><br>
+                    A creative project that merged tech and imagination. AI art proved to be a tool that boosts, not replaces, human creativity.<br><br>
+                  
+                    <strong>📈 What’s Next:</strong><br>
+                    I plan to use AI art in web/game projects and redesign parts of my portfolio with it.
+                  </p>
+                  
+
+                </div>
+
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #CONTACT
+      -->
+
+      <article class="contact" data-page="contact">
+
+        <header>
+          <h2 class="h2 article-title">Contact</h2>
+        </header>
+
+        <section class="mapbox" data-mapbox>
+          <figure>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d59985.64954135183!2d73.77111700512694!3d20.004187289661253!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bddea54b213a9d7%3A0xc2f9ac85ac767a9d!2sPanchavati%2C%20Nashik%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1753365164188!5m2!1sen!2sin
+"
+              width="400" height="300" loading="lazy"></iframe>
+          </figure>
+        </section>
+
+        <section class="contact-form">
+
+          <h3 class="h3 form-title">Contact Form</h3>
+
+          <form action="#" class="form" data-form>
+
+            <div class="input-wrapper">
+              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+
+              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+            </div>
+
+            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+
+            <button class="form-btn" type="submit" disabled data-form-btn>
+              <ion-icon name="paper-plane"></ion-icon>
+              <span>Send Message</span>
+            </button>
+
+          </form>
+
+        </section>
+
+      </article>
+<!--
+  - #SOCIAL
+-->
+
+<article class="social" data-page="social">
+
+  <header>
+    <h2 class="h2 article-title">Social Media</h2>
+  </header>
+
+  <section class="social-grid">
+    <a href="https://github.com/OMShelke16" class="social-card" target="_blank">
+      <img src="assets/images/github1.svg" alt="GitHub">
+      <span>GitHub</span>
+    </a>
+    <a href="https://www.linkedin.com/in/om-shelke-985480303?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="social-card" target="_blank">
+      <img src="assets/images/linkedin.svg" alt="LinkedIn">
+      <span>LinkedIn</span>
+    </a>
+    <a href="https://www.instagram.com/om.shelke.7393?igsh=MTN2dzlzMHNqOGdlZw==" class="social-card" target="_blank">
+      <img src="assets/images/instagram.svg" alt="Instagram">
+      <span>Instagram</span>
+    </a>
+    <a href="https://www.facebook.com/share/1RZCDKC8uN/" class="social-card" target="_blank">
+      <img src="assets/images/facebook.svg" alt="Facebook">
+      <span>Facebook</span>
+    </a>
+    <a href="https://www.threads.net/@om.shelke.7393" class="social-card" target="_blank">
+      <img src="assets/images/threads.svg" alt="Threads">
+      <span>Threads</span>
+    </a>
+    <a href="https://youtube.com/@cubemaster8177?si=jUxKOIh8Q6AbVRQ5" class="social-card" target="_blank">
+      <img src="assets/images/youtube.svg" alt="YouTube">
+      <span>YouTube</span>
+    </a>
+    <a href="https://www.snapchat.com/add/omshelke8888?share_id=KJcyHwRdGGU&locale=en-IN" class="social-card" target="_blank">
+      <img src="assets/images/snapchat.svg" alt="Snapchat">
+      <span>Snapchat</span>
+    </a>
+    <a class="social-card" href="mailto:omdevdattshelke@gmail.com" target="_blank">
+      <img src="assets/images/gmail.svg" alt="Email" />
+      <span>Email</span>
+    </a>
+  </section>
+
+</article>
+
+
+
+
+
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

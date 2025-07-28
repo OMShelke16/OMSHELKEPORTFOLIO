@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Welcome | Om Shelke</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #0d0d0d;
+      color: #00ffaa;
+      font-family: 'Segoe UI', 'Poppins', sans-serif;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      flex-direction: column;
+      padding: 30px;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      color: #00ffaa;
+      text-shadow: 0 0 10px rgba(0, 255, 170, 0.4);
+    }
+
+    p {
+      font-size: 1.4rem;
+      margin-bottom: 30px;
+      color: #cccccc;
+    }
+
+    #typeContainer {
+      font-size: 2rem;
+      max-width: 900px;
+      line-height: 2;
+      color: #ffffff;
+      text-shadow: 0 0 12px rgba(0, 255, 170, 0.2);
+      transition: opacity 1s ease-out;
+    }
+
+    button {
+      padding: 16px 32px;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 30px;
+      background-color: #00ffaa;
+      color: #0d0d0d;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 30px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 16px #00ffaa;
+    }
+
+    .fade-out {
+      opacity: 0;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 1.2rem;
+      }
+
+      #typeContainer {
+        font-size: 1.4rem;
+      }
+
+      button {
+        padding: 12px 24px;
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="intro">
+    <h1>Hi, I'm Om Shelke</h1>
+    <p>AI Engineer · Web & Game Developer</p>
+    <button onclick="startIntro()">▶ Hear & Enter</button>
+  </div>
+
+  <div id="typeContainer" style="display:none;"></div>
+
+  <audio id="introAudio" src="intro.mp3" preload="auto"></audio>
+
+  <script>
+    const script = "Hi, I'm Om Shelke — an AI & ML developer who loves building smart solutions, creative websites, and fun games. I turn ideas into interactive experiences. Welcome to my digital world!";
+    const words = script.split(" ");
+    let currentIndex = 0;
+
+    function startIntro() {
+      document.getElementById("intro").style.display = "none";
+      const container = document.getElementById("typeContainer");
+      container.style.display = "block";
+
+      const audio = document.getElementById("introAudio");
+      audio.play();
+
+      const delayBetweenWords = 400;
+
+      function typeNextWord() {
+        if (currentIndex < words.length) {
+          container.innerHTML += words[currentIndex] + " ";
+          currentIndex++;
+          setTimeout(typeNextWord, delayBetweenWords);
+        } else {
+          setTimeout(() => {
+            container.classList.add("fade-out");
+            setTimeout(() => {
+              window.location.href = "home.html";  // ✅ Updated from index.html
+            }, 1000);
+          }, 2000);
+        }
+      }
+
+      typeNextWord();
+    }
+  </script>
+
+</body>
+</html>
